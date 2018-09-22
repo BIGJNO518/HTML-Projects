@@ -1,33 +1,35 @@
  body {
-   
+
     background-color: black;
-    
+
     }
 
-    h1 {
+    #header {
     color: gold;
     font-family: "Phosphate",Inline;
     font-size: 4.5em;
     }
-     h2 {
+    #top {
     color: gold;
     font-family: "Phosphate",Inline;
     font-size: 1.5em;
     text-decoration: none;
     }
-     h3 {
-    color: gold;
-    font-family: "Phosphate",Inline;
+    #body {
+    color: white;
+    font-family: "Arial Rounded MT Bold";
     font-size: .975em;
     text-decoration: none;
     }
-    
+
     p {
     color: white;
     font-family:"chalkduster";
     font-size: .975em;
     }
-	
+
+
+
 	ul {
     list-style-type: none;
     margin: 0;
@@ -40,7 +42,7 @@
     float: left;
 	}
 
-	a {
+	#mya {
     display: block;
     color: gray;
     text-align: center;
@@ -54,13 +56,13 @@
 	 a:hover {
     color: pink;
 	}
-    
-    blockquote {
+
+    #bq {
     font-style: italic;
     font-size: .875em;
     color: white;
     }
-    
+
     header {
     background-image: url("groupshot.jpg");
     background-repeat: no-repeat;
@@ -71,7 +73,7 @@
     border-width: 5px;
     height: 400px;
     }
-	
+
 
 
 	nav {
@@ -79,9 +81,9 @@
     width: 30%;
     background: black;
     padding: 50px;
-   
+
 	}
-	area{
+	#myarea{
 	display:block;
 	background-color:red;
 	}
@@ -95,7 +97,7 @@ article {
     top: height - header
     background-color: black;
     font-size: 16px;
-   
+
 }
 
 /* Clear floats after the columns */

@@ -1,44 +1,70 @@
 body {
     background-color: black;
-    
+
     }
 
-    h1 {
+    h1.header {
     color: gold;
     font-family: "Phosphate",Inline;
     font-size: 3.5em;
+    float: center;
     }
-    
-    h2 {
+
+    h1.top {
     color: gold;
     font-family: "Phosphate",Inline;
     font-size: 2.5em;
     text-decoration: none;
     }
-     h3 {
+    h1.body {
     color: gold;
     font-family: "Phosphate",Inline;
-    font-size: .975em;
+    font-size: 1.25em;
     text-decoration: none;
     }
-    
+
     p {
     color: white;
     font-family: "chalkduster";
     }
-	
+
+    p.body {
+    color: white;
+    font-family: "Brush Script MT";
+    font-size: 1.50em;
+    }
+
+    p.ben {
+    color: white;
+    font-family: "Futura", regular;
+    font-size: 1.25em;
+    }
+
+     p.solo {
+    color: white;
+    font-family: "Arial Rounded MT Bold";
+    font-style: bold;
+    font-size: 1.25em;
+    }
+
+      p.jayno {
+    color: white;
+    font-family: "Marker Felt";
+    font-size: 1.25em;
+    }
+
+
+
 	li {
-    
     color: white;
     font-family: "chalkduster";
 	}
-	
+
 	ul {
-    color: white;
+    color: red;
     font-family: "chalkduster";
 	}
-	
-	
+
 	a:link {
     	color: gray;
     	text-decoration: none;
@@ -47,35 +73,32 @@ body {
 	a:hover {
    		color: pink;
 	}
-	
-	
+
+
     blockquote {
+    color: gray;
     font-style: italic;
     font-size: .875em;
     }
-    
-    
+
+
     header {
     color: gold;
     margin: auto;
-	background-image: url("group2.jpg");  
+	background-image: url("group2 (1).jpg");
 	background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
     padding: 30px;
-    border-style: solid;
-    border-color: grey;
-    border-width: 5px;
-    height: 500px;  
-	
+    height: 400px;
+
     }
 
 	article {
     float: left;
     padding: 30px;
-    border-color
     width: 70%;
     background-color: black;
-   
+
 }
 
 /* Clear floats after the columns */
@@ -85,9 +108,8 @@ section:after {
     clear: both;
 }
 
-/* Style the footer */
 footer {
-    background-color: #777;
+    background-color: gray;
     padding: 10px;
     text-align: center;
     color: white;
