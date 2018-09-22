@@ -1,7 +1,7 @@
  body {
-   
+
     background-color: black;
-    
+
     }
 
     h1 {
@@ -21,20 +21,20 @@
     font-size: .975em;
     text-decoration: none;
     }
-    
+
      h4 {
     color: gold;
     font-family: "Impact",Inline;
     font-size: .975em;
     text-decoration: none;
     }
-    
-    
+
+
     p {
     color: white;
     font-family: "chalkduster";
     }
-	
+
 	ul {
     list-style-type: none;
     margin: 0;
@@ -60,12 +60,12 @@
 	a:hover {
     color: pink;
 	}
-    
+
     blockquote {
     font-style: italic;
     font-size: .875em;
     }
-    
+
     header {
     background-image: url("groupshot.jpg");
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@
     border-width: 5px;
     height: 400px;
     }
-	
+
 
 
 	nav {
@@ -84,7 +84,7 @@
     width: 20%;
     background: black;
     padding: 50px;
-   
+
 	}
 	area{
 	display:block;
@@ -100,7 +100,7 @@ article {
     top: height - header
     background-color: black;
     font-size: 16px;
-   
+
 }
 
 /* Clear floats after the columns */
