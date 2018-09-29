@@ -86,13 +86,10 @@ body {
     header {
     color: gold;
     margin: auto;
-	background-image: url("group3.jpg");
+	background-image: url("group2.jpg");
 	background-repeat: no-repeat;
   	background-position:center;
     padding: 30px;
-    border-style: solid;
-    border-color: gold;
-    border-width: 10px;
     height: 500px;
 	}
 
@@ -101,8 +98,26 @@ body {
     padding: 30px;
     width: 70%;
     background-color: black;
-   
+
 }
+
+    #orderform {
+    border-style: double;
+    border-color: gold;
+    border-width: 5px;
+   	background-color: gray;
+    padding: 10px;
+    width:30%
+	}
+
+	#divfib{
+     background-color: white;
+     width: 30%
+     border: 5px solid gray;
+     color: black;
+     font-family: Arial;
+     padding: 10px;
+	}
 
 /* Clear floats after the columns */
 section:after {

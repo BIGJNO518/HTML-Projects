@@ -1,125 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="utdmerch.css">
-    <title>UTD Merchandise</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="utdmerch.css">
+	<title>UTD Merchandise</title>
 </head>
+	<script>
+		function validateForm() {
+			var x = document.forms["divfib"]["f_name"].value;
+			var y = document.forms["divfib"]["em"].value;
+			if (x == "") {
+			alert("Name must be filled out");
+			return false;
+		}
+		if (y == "") {
+			alert("Email must be filled out");
+			return false;
+		}
+	</script>
+	<script>
+
+		function emailList(f_name, em, pn, cty, st){
+		 validateForm(){
+			window.alert("Hey" + f_name);<br>
+			document.write("We thank you for signing up to our mailing list.");
+			document.writeln("It's cool you live in " cty + " " + st);
+			document.writeln("We will be using " + em + " as your primary email.);<br>
+			document.writeln("We thank you for signing up to our mailing list.");
+			}
+		}
+
+	</script>
+	<script>
+
+		function getTotal(cd, quan, size){
+
+			if (size == "YSize" && cd){
+			var	price = 11.99;
+			var	total = parseInt(quan)*price + 5.99;
+			}
+			else if (size == "YSize" && !cd){
+			var	price = 14.99;
+			var	total = parseInt(quan)*price;
+			}
+			else if (size != "YSize" && cd){
+			var	price = 14.99;
+			var	total = parseInt(quan)*price + 5.99;
+			}
+			else if (size != "YSize" && !cd){
+			var	price = 14.99;
+			var	total = parseInt(quan)*price;
+			}
+		return total;
+		}
+</script>
 <body>
 <header>
-    <h2>Merchandise and Free Swag</h2>
 </header>
-
+<h2>Merchandise and Free Swag</h2>
 <section>
-    <article>
-        <table>
-            <tr>
-                <th colspan="2">Product Type</th>
-                <th>Size</th>
-                <th>Cost</th>
-                <th>In Stock</th>
-                <th>Colors</th>
-            </tr>
-            <tr>
-                <td colspan="2">Full Download</td>
-                <td>n/a</td>
-                <td>$5.99</td>
-                <td>Yes</td>
-                <td>all</td>
-            </tr>
-            <tr>
-                <td colspan="2">"UTD" logo T-Shirt</td>
-                <td>Large</td>
-                <td>$14.99</td>
-                <td>Yes</td>
-                <td>all</td>
+	<article>
+		<table>
+			<tr>
+				<th colspan="2">Product Type</th>
+				<th>Size</th>
+				<th>Cost</th>
+				<th>In Stock</th>
+				<th>Colors</th>
+			</tr>
+			<tr>
+				<td colspan="2">Full Download</td>
+				<td>n/a</td>
+				<td>$5.99</td>
+				<td>Yes</td>
+				<td>all</td>
+			</tr>
+			<tr>
+				<td colspan="2">"UTD" logo T-Shirt</td>
+				<td>Large Or XL</td>
+				<td>$14.99</td>
+				<td>Yes</td>
+				<td>all</td>
 
-            </tr>
-            <tr>
-                <td colspan="2">"UTD" Logo T-Shirt</td>
-                <td>Medium</td>
-                <td>$14.99</td>
-                <td>Yes</td>
-                <td>all</td>
+			</tr>
+			<tr>
+				<td colspan="2">"UTD" Logo T-Shirt</td>
+				<td>Medium</td>
+				<td>$14.99</td>
+				<td>Yes</td>
+				<td>all</td>
 
-            </tr>
-            <tr>
-                <td colspan="2">"UTD" Logo T-Shirt</td>
-                <td>Small</td>
-                <td>$14.99</td>
-                <td>Limited</td>
-                <td rowspan="2">These sizes available in black and grey only.</td>
-            </tr>
-            <tr>
-                <td colspan="2">"UTD" Logo T-Shirt</td>
-                <td>Youth Sizes</td>
-                <td>$11.99</td>
-                <td>Limited</td>
-            </tr>
-            <tr>
-                <td colspan="2">"Nyeaahhh" Women's T</td>
-                <td>X-Large</td>
-                <td>$12.99</td>
-                <td>Yes</td>
-                <td rowspan="4">White print on Black only</td>
-            </tr>
-            <tr>
-                <td colspan="2">"Nyeaahhh" Women's T</td>
-                <td>Large</td>
-                <td>$12.99</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td colspan="2">"Nyeaahhh" Women's T</td>
-                <td>Small</td>
-                <td>$12.99</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td colspan="2">"Nyeaahhh" Women's T</td>
-                <td>Youth Sizes</td>
-                <td>$12.99</td>
-                <td>Yes</td>
-            </tr>
+			</tr>
+			<tr>
+				<td colspan="2">"UTD" Logo T-Shirt</td>
+				<td>Small</td>
+				<td>$14.99</td>
+				<td>Limited</td>
+				<td rowspan="2">These sizes available in black and grey only.</td>
+			</tr>
+			<tr>
+				<td colspan="2">"UTD" Logo T-Shirt</td>
+				<td>Youth Sizes</td>
+				<td>$11.99</td>
+				<td>Limited</td>
+			</tr>
+			<tr>
+				<td colspan="2">"Nyeaahhh" Women's T</td>
+				<td>X-Large</td>
+				<td>$12.99</td>
+				<td>Yes</td>
+				<td rowspan="4">White print on Black only</td>
+			</tr>
+			<tr>
+				<td colspan="2">"Nyeaahhh" Women's T</td>
+				<td>Large</td>
+				<td>$12.99</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td colspan="2">"Nyeaahhh" Women's T</td>
+				<td>Small</td>
+				<td>$12.99</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td colspan="2">"Nyeaahhh" Women's T</td>
+				<td>Youth Sizes</td>
+				<td>$12.99</td>
+				<td>Yes</td>
+			</tr>
 
 
-        </table>
-        <p>All proceeds go directly to local charities. "all" refers to White, Grey, Black, Pink</br>
-            and Purple with various color designs.
-        </p>
-    </article>
+		</table>
+		<p>All proceeds go directly to local charities. "all" refers to White, Grey, Black, Pink</br>
+			and Purple with various color designs.
+		</p>
+	</article>
 </section>
 <section>
-    <div id="orderform">
-        <form  action="mailto:underthedenrocks@gmail.com?Subject=Merch Order" target="_top"
-               enctype="text/plain">
-            <h2 align="center">UTD Order Form </h2>
-            <p>T-Shirts</p>
-            <br>
-            <p>Size</p>
-            <select size="1">
-                <option value="XL">XL</option>
-                <option value="Large">Large</option>
-                <option value="Medium">Medium</option>
-                <option value="Small">Small</option>
-                <option value="YSize">YSize</option>
-            </select>
-            <input type="text" name="quantity" value=""> <br>
-            <input type="button" name="cdbutton" checked> <p>Purchase Album</p>
+	<div id="orderform">
+		<table>
+		<form enctype="text/plain">
+			<h2 align="center">UTD Order Form </h2>
+			<h3>T-Shirts</h3>
+			<p>Size</p>
+			<select name="sel1" size="1">
+				<option value="XL">XL</option>
+				<option value="Large">Large</option>
+				<option value="Medium">Medium</option>
+				<option value="Small">Small</option>
+				<option value="YSize">YSize</option>
+			</select>
+			<p>Quantity</p>
+			<input type="text" name="quantity"> <br>
+			<p></p>
+			<p>Purchase Album</p>
+			<input type="checkbox" name="cdbox">
+			<p style="font-family:arial;">Yes I would like to add a copy of the album<br>
+			to my order.</p>
+			<p></p>
+			<p>Total Amount</p>
+			<input type="text" name="result" size="10"> <br> <br>
+			<input type="button" name="resbutton" value="Complete Order" onclick="result.value=getTotal(cdbox.value, quantity.value, sel1.value);">
+			<input type="reset" name="reset1" value="Clear Info"> <br>
+		</form>
+		</table>
+	</div>
+	<div style="width:30%">
+		<h2>UTD Mailing List</h2>
+		<form id="divfib" enctype="text/plain" >
+			<p style="color:black;">Your First Name: <input type="text" name="usrname"size="20"></p>
+			<p style="color:black;">Your Email: <input type="text" name="email1" size="20"></p>
+			<p style="color:black;">Phone Number: <input type="text" name="pn" size="12"></p>
+			<p style="color:black;">Your City: <input type="text" name="cty" size="20"></p>
+			<p style="color:black;">Your State: <select name= "sel2" size="1">
+				 <option value="NY" name="s1">NY</option>
+				 <option value="MA" name="s2">MA</option>
+				 <option value="CT" name="s3">CT</option>
+				 <option value="NH">NH</option>
+				 <option value="VT">VT</option>
+				 <option value="ME">ME</option>
+				 <option value="OT">OTHER</option>
+			 </select>
+			 </p>
+			<input type="button" name ="listbutton" value="Sign Up" onclick="emailList(usrname.value, email1.value, pn.value,cty.value, sel2.value);"> <br>
+			<input type="reset" name="reset1" value="Clear Info"> <br>
+		</form>
 
-            <input type="reset" name="reset1" value="Clear Info"> <br>
-            <input type="submit" name="submit1" value="Complete Order">
-        </form>
-    </div>
+	</div>
 </section>
 <section>
-    <footer>
-        <a style="padding:10px; float:left;" href = "index.html">  Home  </a>
-        <a style="padding:10px; float:left;" href = "utdmerch.html">  Merchandise   </a>
-        <a style="padding:10px; float:left;" href = "mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target = "_top" >  Booking  </a>
-        <a style="padding:10px; float:left;" href = "utdsonglyrics.html"> Song Lyrics  </a>
-        <a style="padding:10px; float:left;" href = "https://www.reverbnation.com/undertheden/songs"> Music  </a>
-    </footer>
+	<footer>
+		<a style="padding:10px; float:left;" href = "index.htm">  Home  </a>
+		<a style="padding:10px; float:left;" href = "utdmerch.html">  Merchandise   </a>
+		<a style="padding:10px; float:left;" href = "mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target = "_top" >  Booking  </a>
+		<a style="padding:10px; float:left;" href = "utdsonglyrics.html"> Song Lyrics  </a>
+		<a style="padding:10px; float:left;" href = "https://www.reverbnation.com/undertheden/songs"> Music </a>
+	</footer>
 </section>
 
 </body>
