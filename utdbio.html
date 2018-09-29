@@ -8,8 +8,19 @@
     <script>
         function changePhoto(){
 
-            if(document.bioform.sel3.value=="Group"){
-                document.pic1.src="
+            if (document.bioform.sel3.value=="2018"){
+                document.pic1.src="Live2017.jpg";
+            }
+            else if (document.bioform.sel3.value=="2017"){
+                document.pic1.src="Live1.jpg";
+            }
+            else if (document.bioform.sel3.value=="2016"){
+                document.pic1.src="g4.jpg";
+            }
+            else {
+                document.pic1.src="Live2.jpg";
+            }
+
 
         }
     </script>
@@ -61,12 +72,18 @@
         </ul>
 
     </article>
-    <article>
+    <article width="100%">
         <p>Scroll Through to see Different Pictures of the Band</p>
-        <form name="bioform"></form>
+        <form name="bioform" width="100%">
         <select class="custom-select" onchange="changePhoto()">
-            <option
+            <option value="2018" checked>2018</option>
+            <option value="2017" >2017</option>
+            <option value="2016" >2016</option>
+            <option value="Live" >Live</option>
         </select>
+        </form>
+        <img src="g4.jpg" name="pic1" width="300" height="380">
+        <p></p>
     </article>
 </section>
 
@@ -83,7 +100,7 @@
             Brand New, and Guns N Roses. </br>
         </p>
         <h1 class="body" ><a name="Benzo">Benzo</a></h1>
-        <img src="benzo copy.jpg" alt="Ben Zoleski" width="275" height="350"/>
+        <img src="The boys.jpg" alt="Ben Zoleski" width="275" height="350"/>
         <p class="ben">Ben is the youngest in the band, but he has a rich background</br>
             playing many shows with many different types of bands inlcuding The Refrigerators</br>
             and C.K Flach. He enjoys teaching music when not rocking or creating, which is why
