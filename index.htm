@@ -6,6 +6,8 @@
     <title>Under The Den</title>
 
 </head>
+
+
 <body>
 <header>
     <h1 id="header">Under The Den</h1>
@@ -32,8 +34,19 @@
             We also have a page for song lyrics and lyric videos if you're into that kind of thing.
         </p>
         <p>The site is a work in progress, so thank you for your patience. We really appreciate you</br>
-            stopping by and checking us out and listening to the music. We love life, and hope you do to.
+            stopping by and checking us out and listening to the music. We love life, and hope you do too.
         </p>
+        <img id="watercolor" src="watercolor.jpg" alt="watercolorgirl" />
+        <canvas id="jcan" width="300" height="200" style="border:3px solid gold;">
+        </canvas>
+        <script>
+            window.onload= function(){
+                var canvas = document.getElementById("jcan");
+                var ctx = canvas.getContext(2d);
+                var img = document.getElementById("watercolor");
+                ctx.drawImage(img, 300, 200);
+                };
+        </script>
     </nav>
 
     <article>
@@ -53,6 +66,8 @@
             <area shape="circle" coords="295,270,25" alt="Malcom's Schenectady" href="https://www.malcolmsrestaurant.com">
             <area shape="circle" coords="360,380,25" alt="Ama Cocina Albany" href="http://www.amacocina.com">
         </map>
+        <br>
+
 
     </article>
 </section>
