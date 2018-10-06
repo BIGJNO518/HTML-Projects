@@ -5,6 +5,29 @@
 	<link rel="stylesheet" type="text/css" href="utdmerch.css">
 	<title>UTD Merchandise</title>
 </head>
+<script>
+
+		function showTotal(result){
+			// Get the button that opens the modal
+			var btn = document.getElementById("resbutton");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on the button, open the modal
+			btn.onclick = function() {
+   			 modal.style.display = "block";
+			}
+			span.onclick = function() {
+   			 modal.style.display = "none";
+			}
+			window.onclick = function(event) {
+    			if (event.target == modal) {
+       			modal.style.display = "none";
+    		}
+
+		}
+	</script>
 	<script>
 		function validateForm() {
 			var x = document.forms["divfib"]["f_name"].value;
@@ -33,27 +56,54 @@
 	</script>
 	<script>
 
-		function getTotal(cd, quan, size){
+		function getTotal(cd, quan, size, quan2, size2, cdtype){
+			var price;
+			var price2 = 12.99;
+			var total = 0;
+			if (cd == "true"){
+			 if(cdtype == "Digital Download"){
+			 	total = 5.99;
+			 }
+			 else
+			 	total = 7.99;
+			}
+			else if (size == "YSize"){
+				price = 11.99;
+				if (size2 != "Select One" && cd =="true"){
+			 		total = parseInt(quan)*price + parseInt(quan2)*price2 + 5.99;
+			 	}
+			 	else
+			 		total = parseInt(quan)*price + 5.99;
+			}
+			else if (size == "YSize" && cd == "false"){
+				price = 11.99;
+				if (size2 == "Select One"){
+			 		total = parseInt(quan)*price + parseInt(quan2)*price2;
+			 	}
+			 	else
+					total = parseInt(quan)*price;
+			}
 
-			if (size == "YSize" && cd){
-			var	price = 11.99;
-			var	total = parseInt(quan)*price + 5.99;
+			else if (size != "YSize" && cd == "true" && size != "Select One"){
+				price = 14.99;
+				if (size2 != "Select One"){
+			 		total = parseInt(quan)*price + parseInt(quan2)*price2 + 5.99;
+			 	}
+			 	else
+					total = parseInt(quan)*price + 5.99;
 			}
-			else if (size == "YSize" && !cd){
-			var	price = 14.99;
-			var	total = parseInt(quan)*price;
-			}
-			else if (size != "YSize" && cd){
-			var	price = 14.99;
-			var	total = parseInt(quan)*price + 5.99;
-			}
-			else if (size != "YSize" && !cd){
-			var	price = 14.99;
-			var	total = parseInt(quan)*price;
+			else if (size != "YSize" && cd != "true" && size != "Select One"){
+				price = 14.99;
+				if (size2 != "Select One"){
+			 		total = parseInt(quan)*price + parseInt(quan2)*price2;
+			 	}
+			 	else
+			 		total = parseInt(quan)*price;
 			}
 		return total;
 		}
-</script>
+	</script>
+
 <body>
 <header>
 </header>
@@ -140,11 +190,13 @@
 <section>
 	<div id="orderform">
 		<table>
-		<form enctype="text/plain">
+			<column>
+		<form enctype="text/plain" >
 			<h2 align="center">UTD Order Form </h2>
-			<h3>T-Shirts</h3>
+			<h3>Men's T-Shirts</h3>
 			<p>Size</p>
-			<select name="sel1" size="1">
+			<select name="sel1" size="1" onselect="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)">
+				<option value="Select One" >Select One</option>
 				<option value="XL">XL</option>
 				<option value="Large">Large</option>
 				<option value="Medium">Medium</option>
@@ -152,20 +204,85 @@
 				<option value="YSize">YSize</option>
 			</select>
 			<p>Quantity</p>
-			<input type="text" name="quantity"> <br>
+			<input type="text" name="quantity" oninput="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)"> <br>
+
+			<h3>Women's T-Shirts</h3>
+			<p>Size</p>
+			<select name="sel2" size="1" onselect="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)" >
+				<option value="Select One" >Select One</option>
+				<option value="XL">XL</option>
+				<option value="Large">Large</option>
+				<option value="Medium">Medium</option>
+				<option value="Small">Small</option>
+				<option value="YSize">YSize</option>
+			</select>
+			<p>Quantity</p>
+			<input type="text" name="quantity2"
+				   oninput="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)"> <br>
+
+
+
 			<p></p>
 			<p>Purchase Album</p>
-			<input type="checkbox" name="cdbox">
+			<input type="checkbox" name="cdbox" value="false"
+					onchange="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)" ><br>
+			<br>
+
+				<input type="radio" name="cdtype" value="Digital Download"
+					   onchange="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)"> Digital Download<br>
+				<input type="radio" name="cdtype" value="Physical Copy"
+					   onchange="result.value=getTotal(cdbox.value, quantity.value, sel1.value, quantity2.value, sel2.value, cdtype.value)"> Physical Copy <br>
+
+
+
 			<p style="font-family:arial;">Yes I would like to add a copy of the album<br>
 			to my order.</p>
 			<p></p>
 			<p>Total Amount</p>
-			<input type="text" name="result" size="10"> <br> <br>
-			<input type="button" name="resbutton" value="Complete Order" onclick="result.value=getTotal(cdbox.value, quantity.value, sel1.value);">
+			<input type="text" name="result" id="result" size="10"> <br> <br>
+			<input type="button"  id="resbutton" value="Complete Order">
 			<input type="reset" name="reset1" value="Clear Info"> <br>
+
 		</form>
+			</column>
 		</table>
+
 	</div>
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Thank you for your order!</p>
+			<output value="result.value"></output>
+			<p>was your total today.</p>
+		</div>
+
+	</div>
+	<script>
+
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("resbutton");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on the button, open the modal
+			btn.onclick = function() {
+   			 modal.style.display = "block";
+			}
+			span.onclick = function() {
+   			 modal.style.display = "none";
+			}
+			window.onclick = function(event) {
+    			if (event.target == modal) {
+       			modal.style.display = "none";
+    		}
+
+		}
+	</script>
 	<div style="width:30%">
 		<h2>UTD Mailing List</h2>
 		<form id="divfib" enctype="text/plain" >

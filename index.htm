@@ -24,9 +24,9 @@
             <li> <a class="mya" href = "utdmerch.html">  Merchandise   </a></li>
         </ul>
         <ul>
-            <li> <a class="mya" href = "mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target = "_top" >  Booking  </a></li>
-            <li> <a class="mya" href = "utdsonglyrics.html"> Song Lyrics  </a></li>
-            <li> <a class="mya" href = "https://www.reverbnation.com/undertheden/songs"> Music  </a></li>
+            <li> <a class="mya" href="mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target="_top" >  Booking  </a></li>
+            <li> <a class="mya" href="utdsonglyrics.html"> Song Lyrics  </a></li>
+            <li> <a class="mya" href="https://www.reverbnation.com/undertheden/songs"> Music  </a></li>
 
         </ul>
         <p>Click on a link for more information about the band, </br>
@@ -36,17 +36,19 @@
         <p>The site is a work in progress, so thank you for your patience. We really appreciate you</br>
             stopping by and checking us out and listening to the music. We love life, and hope you do too.
         </p>
-        <img id="watercolor" src="watercolor.jpg" alt="watercolorgirl" />
-        <canvas id="jcan" width="300" height="200" style="border:3px solid gold;">
+        <img id ="watercolor" src="watercolor.jpg" alt="watercolorgirl" width="0" height="0"/>
+        <canvas id="jcan" width="350" height="250" style="border:3px solid gold;" >
         </canvas>
+
         <script>
-            window.onload= function(){
+            window.onload = function() {
                 var canvas = document.getElementById("jcan");
-                var ctx = canvas.getContext(2d);
+                var ctx = canvas.getContext("2d");
                 var img = document.getElementById("watercolor");
-                ctx.drawImage(img, 300, 200);
+                ctx.drawImage(img, 0, 0);
                 };
         </script>
+
     </nav>
 
     <article>
@@ -58,7 +60,7 @@
         </p>
         <p style="font-size:1.25em;"> Click on Saratoga Springs, Albany, or Schenectady for </br>
             links to our favorite place in each city.</p>
-        <img src="cdmap.png" width="600" height="400"
+        <img src="cdmap.png" width="500" height="300"
              alt="Capital District Map" usemap="#cdmap">
 
         <map name="cdmap">
@@ -68,10 +70,63 @@
         </map>
         <br>
 
-
     </article>
 </section>
 <section>
+    <div class="slideshow-container" >
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="group2.jpg" style="width:100%">
+            <div class="text">#NNYEAHHHH</div>
+        </div>
+
+        <div class="mySlides fade" >
+            <div class="numbertext">2 / 5</div>
+            <img src="j3.jpg" style="width:100%" >
+            <div class="text">The Gang</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="jayrooftop.jpg" style="width:100%">
+            <div class="text">Rooftop</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="Live1.jpg" style="width:100%">
+            <div class="text">All The Way LIVE</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="The boys.jpg" style="width:100%">
+            <div class="text">THE BOYS</div>
+        </div>
+    </div>
+    <br>
+
+    <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i+=1) {
+             slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+</section>
+<section>
+    <nav>
+    <script src="gamescript.js"></script>
+    </nav>
 </section>
 <section>
     <footer>
