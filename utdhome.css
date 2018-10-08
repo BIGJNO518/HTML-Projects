@@ -29,10 +29,14 @@
         font-size: .975em;
     }
 
-    canvas {
+    #jcan {
         border: 1px solid gold;
         background-color: gray;
     }
+    canvas{
+        border: 1px solid gold;
+        background-color: gray;
+     }
 
 	ul {
         list-style-type: none;
