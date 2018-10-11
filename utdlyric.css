@@ -99,6 +99,7 @@
     color: white;
     font-family:"Futura";
     padding: 10px;
+    border-padding:10px;
     }
     #uc {
     border-style: solid;

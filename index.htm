@@ -9,11 +9,35 @@
 </head>
 
 
-<body>
+<body >
 <header>
     <h1 id="header">Under The Den</h1>
 </header>
+<p></p>
+
+<div id="container" onmouseover="myMove()">
+<div id="animate"></div>
+</div>
+<script>
+    function myMove() {
+        var elem = document.getElementById("animate");
+        var container = document.getElementById("container");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+
+        function frame() {
+            if (pos == container.width - 10) {
+                clearInterval(id);
+            }
+            else {
+                pos++;
+                elem.style.left = pos + 'px';
+            }
+        }
+    }
+</script>
 <section>
+
     <nav>
         <blockquote id ="bq">"Be Bold. Dare Mighty Things." </br>
             This is our goal. To reach out and spread joy.
@@ -70,42 +94,51 @@
             <area shape="circle" coords="360,380,25" alt="Ama Cocina Albany" href="http://www.amacocina.com">
         </map>
         <br>
+        <section>
+            <div class="slideshow-container" >
 
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="group2.jpg" style="width:100%">
+                    <div class="text">#NNYEAHHHH</div>
+                </div>
+
+                <div class="mySlides fade" >
+                    <div class="numbertext">2 / 5</div>
+                    <img src="j3.jpg" style="width:100%" >
+                    <div class="text">The Gang</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="jayrooftop.jpg" style="width:100%">
+                    <div class="text">Rooftop</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="Live1.jpg" style="width:100%">
+                    <div class="text">All The Way LIVE</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="The boys.jpg" style="width:100%">
+                    <div class="text">THE BOYS</div>
+                </div>
+            </div>
+            <br>
+            <p>How About a Game?</p>
+            <form>
+                <<form>
+                <input type="button" value="Play A GAme" onclick="window.location.href='test.html'" />
+            </form>
+            </form>
+        </section>
     </article>
 </section>
-<section>
-    <div class="slideshow-container" >
 
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 5</div>
-            <img src="group2.jpg" style="width:100%">
-            <div class="text">#NNYEAHHHH</div>
-        </div>
 
-        <div class="mySlides fade" >
-            <div class="numbertext">2 / 5</div>
-            <img src="j3.jpg" style="width:100%" >
-            <div class="text">The Gang</div>
-        </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 5</div>
-            <img src="jayrooftop.jpg" style="width:100%">
-            <div class="text">Rooftop</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 5</div>
-            <img src="Live1.jpg" style="width:100%">
-            <div class="text">All The Way LIVE</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 5</div>
-            <img src="The boys.jpg" style="width:100%">
-            <div class="text">THE BOYS</div>
-        </div>
-    </div>
-    <br>
-</section>
+
     <script>
             var slideIndex = 0;
             showSlides();
@@ -124,24 +157,6 @@
             }
        </script>
 
-
-<section>
-<p>How About a Game?</p>
-    <form>
-<<form>
-        <input type="button" value="Play A GAme" onclick="window.location.href='test.htm'" />
-    </form>
-    </form>
-</section>
-<section>
-    <footer>
-        <a style="padding:10px; float:left;" href = "utdhome.html">  Home  </a>
-        <a style="padding:10px; float:left;" href = "utdmerch.html">  Merchandise   </a>
-        <a style="padding:10px; float:left;" href = "mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target = "_top" >  Booking  </a>
-        <a style="padding:10px; float:left;" href = "utdsonglyrics.html"> Song Lyrics  </a>
-        <a style="padding:10px; float:left;" href = "https://www.reverbnation.com/undertheden/songs"> Music  </a>
-    </footer>
-</section>
 
 </body>
 </html>
