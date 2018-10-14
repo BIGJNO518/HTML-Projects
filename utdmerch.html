@@ -189,8 +189,7 @@
 </section>
 <section>
 	<div id="orderform">
-		<table>
-			<column>
+
 		<form enctype="text/plain" >
 			<h2 align="center">UTD Order Form </h2>
 			<h3>Men's T-Shirts</h3>
@@ -240,39 +239,43 @@
 			<p></p>
 			<p>Total Amount</p>
 			<input type="text" name="result" id="result" size="10"> <br> <br>
-			<input type="button"  id="resbutton" value="Complete Order">
+			<input type="button"  id="resbutton" value="Complete Order" onclick="displayResultInModal(result.value)"/>
 			<input type="reset" name="reset1" value="Clear Info"> <br>
 
 		</form>
-			</column>
-		</table>
 
 	</div>
 
-	<div id="myModal" class="modal">
+	<div id="myModal" class="modal" onload="displayResultInModal(result.value)">
 
 		<!-- Modal content -->
-		<div class="modal-content">
+		<div id = "mmc" class="modal-content">
+<br>
 			<span class="close">&times;</span>
-			<p>Thank you for your order!</p>
-			<output value="result.value"></output>
-			<p>was your total today.</p>
 		</div>
 
 	</div>
 	<script>
-
-
-			// Get the button that opens the modal
-			var btn = document.getElementById("resbutton");
-
-			// Get the <span> element that closes the modal
+		function displayResultInModal(result){
+		var h1 = document.createElement("h4")
+		var par = document.createElement("p");
+		var par2 = document.createElement("p");
+		var h1t = document.createTextNode("Thank you for your order!");
+		var textnode = document.createTextNode("$" + ParseInt(result));
+		var p2t = document.createTextNode("Your total today was: ");
+		h1.appendChild(h1t);
+		par.appendChild(textNode);
+		par2.appendChild(p2t);
+		document.getElementById("mmc").appendChild(h1);
+		document.getElementById("mmc").appendChild(par2);
+		document.getElementById("mmc").appendChild(par);
+		var mod = document.getElementById("myModal");
+		mod.style.display = "block";
+		}
+	</script>
+	<script>
+		// Get the <span> element that closes the modal
 			var span = document.getElementsByClassName("close")[0];
-
-			// When the user clicks on the button, open the modal
-			btn.onclick = function() {
-   			 modal.style.display = "block";
-			}
 			span.onclick = function() {
    			 modal.style.display = "none";
 			}
@@ -283,7 +286,42 @@
 
 		}
 	</script>
-	<div style="width:30%">
+	<script>
+	function emailResponse(){
+		var fname = document.getElementbyName("usrname");
+		if (fname == ""){
+			var par = document.createElement("p");
+	  	var att = document.createAttribute("class");
+	  	att.value = "response";
+	  	par.setAttributeNode(att);
+	  	var text = document.createTextNode(" Hey you need to enter your first name, try again!");
+	  	par.appendChild(text);
+	  	document.getElementById("divfib").appendChild(par);
+		}
+		var email = document.getElementByName("email1");
+		if (email == ""){
+		var par = document.createElement("p");
+	  	var att = document.createAttribute("class");
+	  	att.value = "response";
+	  	par.setAttributeNode(att);
+	  	var text = document.createTextNode(" Hey you need to enter your email, try again!");
+	  	par.appendChild(text);
+	  	document.getElementById("divfib").appendChild(par);
+	  	}
+	  	else{
+	  	var par = document.createElement("p");
+	  	var att = document.createAttribute("class");
+	  	att.value = "response";
+	  	par.setAttributeNode(att);
+	  	var text = document.createTextNode(" Thanks for joining the Mailing List!");
+	  	par.appendChild(text);
+	  	document.getElementById("divfib").appendChild(par);
+
+
+	}
+	</script>
+
+	<div style="width:30%;" >
 		<h2>UTD Mailing List</h2>
 		<form id="divfib" enctype="text/plain" >
 			<p style="color:black;">Your First Name: <input type="text" name="usrname"size="20"></p>
@@ -299,10 +337,10 @@
 				 <option value="ME">ME</option>
 				 <option value="OT">OTHER</option>
 			 </select>
-			 </p>
-			<input type="button" name ="listbutton" value="Sign Up" onclick="emailList(usrname.value, email1.value, pn.value,cty.value, sel2.value);"> <br>
-			<input type="reset" name="reset1" value="Clear Info"> <br>
 		</form>
+			<input type="button" name ="listbutton" value="Sign Up" onclick="emailResponse()"> <br>
+			<input type="reset" name="reset1" value="Clear Info"> <br>
+
 
 	</div>
 </section>
