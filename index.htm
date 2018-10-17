@@ -9,10 +9,12 @@
 </head>
 <script>
     function removeStuff(){
-        var gamestuff = document.getElementByName("playbut");
+        var gamestuff = document.getElementById("playbut");
+        var form = document.getElementbyId("remform");
         var img = document.getElementById("watercolor");
-        document.body.removeChild(gamestuff);
-        document.body.removeChild(img);
+        var nav = document.getElementByTagName("nav");
+        nav.removeChild(img);
+        document.form.removeChild(gamestuff);
     }
 </script>
 
@@ -20,6 +22,37 @@
 <header>
     <h1 id="header">Under The Den</h1>
 </header>
+<div id="navbar">
+    <a id="c1" href="https://www.reverbnation.com/undertheden/songs"> Music </a>
+    <a id="c2" href = "utdbio.html">  About The Band   </a>
+    <a id="c3" href="utdsonglyrics.html"> Song Lyrics  </a>
+    <a id="c4" href = "utdmerch.html">  Merchandise   </a>
+    <a id="c5" href="mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target="_top" >  Booking  </a>
+    <button type="button" class="mybtn">Art Stuff</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#jcan">Canvas Art</a>
+        <a href="#ss">Slideshow</a>
+        <a href="text.html#gamebody">Game</a>
+        <a href="#cdmap">Foodie Spots</a>
+    </div>
+    </div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>
+
+
 <p></p>
 
 <div id="container" onmouseover="myMove()">
@@ -30,10 +63,10 @@
         var elem = document.getElementById("animate");
         var container = document.getElementById("container");
         var pos = 0;
-        var id = setInterval(frame, 5);
+        var id = setInterval(frame, 2);
 
         function frame() {
-            if (pos == container.width - 10) {
+            if (pos == 1000) {
                 clearInterval(id);
             }
             else {
@@ -51,18 +84,10 @@
             To make life the best we can, everyday,</br> and push that energy outward. ~ UTD
         </blockquote>
 
-        <ul>
-            <li> <a class="mya" href = "utdbio.html">  About The Band   </a></li>
-            <li> <a class="mya" href = "utdmerch.html">  Merchandise   </a></li>
-        </ul>
-        <ul>
-            <li> <a class="mya" href="mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target="_top" >  Booking  </a></li>
-            <li> <a class="mya" href="utdsonglyrics.html"> Song Lyrics  </a></li>
-            <li> <a class="mya" href="https://www.reverbnation.com/undertheden/songs"> Music  </a></li>
 
-        </ul>
-        <p>Click on a link for more information about the band, </br>
-            connect to our music page, send us a booking inquiry, or check out some merch.</br>
+        </div>
+        <p>Click in the nav bar for more information like: </br>
+            -connect to our music page, <br>- send us a booking inquiry, <br>-or check out some merch.</br>
             We also have a page for song lyrics and lyric videos if you're into that kind of thing.
         </p>
         <p>The site is a work in progress, so thank you for your patience. We really appreciate you</br>
@@ -102,7 +127,7 @@
         </map>
         <br>
         <section>
-            <div class="slideshow-container" >
+            <div id="ss" class="slideshow-container" >
 
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 5</div>
@@ -133,10 +158,10 @@
                 </div>
             </div>
             <br>
-            <p>How About a Game?</p>
             <form>
-                <<form>
-                <input type="button" value="Play A Game" name="playbut" onclick="window.location.href='test.html'" />
+            <p>How About a Game?</p>
+            <form id = "remform">
+                <input type="button" value="Play A Game" id="playbut" onclick="window.location.href='test.html'" />
                 <input type="button" value="Not Today" name="deny" onclick="removeStuff()"/>
             </form>
             </form>
@@ -164,16 +189,16 @@
             setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
        </script>
-<script type="text/javascript">
-    function removeStuff(){
-        var gamestuff = document.getElementByName("playbut");
-        var img = document.getElementById("watercolor");
-        var can = getElementById("jcan");
-        document.body.removeChild(gamestuff);
-        document.body.removeChild(img);
-        document.body.removeChild(can);
-    }
-</script>
+        <script>
+            function removeStuff(){
+            var gamestuff = document.getElementByName("playbut");
+            var img = document.getElementById("watercolor");
+            var can = getElementById("jcan");
+            document.body.removeChild(gamestuff);
+            document.body.removeChild(img);
+            document.body.removeChild(can);
+        }
+    </script>
 
 </body>
 </html>

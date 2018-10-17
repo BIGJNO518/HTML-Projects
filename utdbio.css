@@ -7,7 +7,7 @@ body {
     color: gold;
     font-family: "Phosphate",Inline;
     font-size: 3.5em;
-    float: center;
+    float: bottom;
     }
 
     h1.top {
@@ -85,11 +85,11 @@ body {
     header {
     color: gold;
     margin: auto;
-	background-image: url("group2 (1).jpg");
+	background-image: url("group2.jpg");
 	background-repeat: no-repeat;
     background-position: center;
-    padding: 30px;
-    height: 400px;
+    padding: 10px;
+    height: 450px;
 
     }
 
