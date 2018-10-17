@@ -28,21 +28,23 @@
     <a id="c3" href="utdsonglyrics.html"> Song Lyrics  </a>
     <a id="c4" href = "utdmerch.html">  Merchandise   </a>
     <a id="c5" href="mailto:underthedenrocks@gmail.com?Subject=Booking Inquiry" target="_top" >  Booking  </a>
-    <button type="button" class="mybtn">Art Stuff</button>
-    <div id="myDropdown" class="dropdown-content">
+    <div class="dropdown">
+        <button type="button" class="mybtn" onclick="dropFunction()">Art Stuff</button>
+    <div id="myDropdown" class="dropdown-content" >
         <a href="#jcan">Canvas Art</a>
         <a href="#ss">Slideshow</a>
-        <a href="text.html#gamebody">Game</a>
+        <a href="test.html#gamebody">Game</a>
         <a href="#cdmap">Foodie Spots</a>
     </div>
     </div>
+</div>
 <script>
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {navFunction()};
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
-function myFunction() {
+function navFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
@@ -51,10 +53,25 @@ function myFunction() {
 }
 
 </script>
+<script>
+    function dropFunction(){
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+  if (!event.target.matches('.mybtn')) {
 
-
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 <p></p>
-
 <div id="container" onmouseover="myMove()">
 <div id="animate"></div>
 </div>
