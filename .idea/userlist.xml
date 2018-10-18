@@ -1,0 +1,43 @@
+<userlist>
+    <user category="band">
+        <username>Jason Nowak</username>
+        <userId>12345</userId>
+        <userAd>123 Rock Ave.</userAd>
+        <usercty>Schenectady</usercty>
+        <userst>New York</userst>
+        <userRole>Admin</userRole>
+    </user>
+    <user category="band">
+        <username>John Nowak</username>
+        <userId>23456</userId>
+        <userAd>123 Shlock Ave.</userAd>
+        <usercty>Schenectady</usercty>
+        <userst>New York</userst>
+        <userRole>Admin</userRole>
+    </user>
+    <user category="band">
+        <username>Ben Zoleski</username>
+        <userId>34567</userId>
+        <userAd>Touring</userAd>
+        <usercty>World</usercty>
+        <userst>New York</userst>
+        <userRole>Admin</userRole>
+    </user>
+    <user category="band">
+        <username>Madison Lewis</username>
+        <userId>45678</userId>
+        <userAd>123 Blump Rd.</userAd>
+        <usercty>Schenectady</usercty>
+        <userst>New York</userst>
+        <userRole>Admin</userRole>
+    </user>
+    <user category="general">
+        <username>John Doe</username>
+        <username>Jane Doe</username>
+        <userId>55555</userId>
+        <userAd>111 Derp Blvd.</userAd>
+        <usercty>New York</usercty>
+        <userst>New York</userst>
+        <userRole>None</userRole>
+    </user>
+</userlist>
