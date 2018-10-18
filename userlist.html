@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>UserList</title>
 </head>
-<body id="demo">
+<body id="userbod">
+<script>
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
@@ -16,8 +17,9 @@ xhttp.send();
 
 function myFunction(xml) {
 var xmlDoc = xml.responseXML;
-document.getElementById("demo").innerHTML =
+document.getElementById("userbod").innerHTML =
 xmlDoc.getElementsByTagName("user")[0].childNodes[0].nodeValue;
 }
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <userlist>
     <user category="band">
-        <username>Jason Nowak</username>
+        <username>Jason Nowak</username> <!-- child [0] -->
         <userId>12345</userId>
         <userAd>123 Rock Ave.</userAd>
         <usercty>Schenectady</usercty>
