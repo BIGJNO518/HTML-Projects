@@ -8,6 +8,7 @@
         <userst>New York</userst>
         <userRole>Admin</userRole>
     </user>
+
     <user category="band">
         <username>John Nowak</username>
         <userId>23456</userId>
@@ -16,6 +17,7 @@
         <userst>New York</userst>
         <userRole>Admin</userRole>
     </user>
+
     <user category="band">
         <username>Ben Zoleski</username>
         <userId>34567</userId>
@@ -24,6 +26,7 @@
         <userst>New York</userst>
         <userRole>Admin</userRole>
     </user>
+
     <user category="band">
         <username>Madison Lewis</username>
         <userId>45678</userId>
@@ -32,6 +35,7 @@
         <userst>New York</userst>
         <userRole>Admin</userRole>
     </user>
+
     <user category="general">
         <username>John Doe</username>
         <username>Jane Doe</username>
@@ -41,4 +45,5 @@
         <userst>New York</userst>
         <userRole>None</userRole>
     </user>
+
 </userlist>

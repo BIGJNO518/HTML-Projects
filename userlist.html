@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>UserList</title>
-</head>
+
 <body id="userbod">
+<p id="userp" style="color:black"><button type="button" onclick="loadXML()"</p>
 <script>
+function loadXML{
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
@@ -17,9 +16,12 @@ xhttp.send();
 
 function myFunction(xml) {
 var xmlDoc = xml.responseXML;
-document.getElementById("userbod").innerHTML =
-xmlDoc.getElementsByTagName("user")[0].childNodes[0].nodeValue;
+var x = xmlDoc.getElementsByTagName("user")[0];
+document.getElementById("userp").innerHTML =
+x.childNodes[0].nodeValue;
 }
+}
+
 </script>
 </body>
 </html>
