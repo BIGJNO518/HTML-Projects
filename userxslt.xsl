@@ -3,20 +3,21 @@
     <xsl:template match="/">
         <html>
         <body bgcolor="black">
-        <h2>User List</h2>
+
+        <h2 style="color:white">User List</h2>
     <table>
         <tr bgcolor="gray" >
-            <th color="white">User</th>
-            <th color="white">ID</th>
-            <th color="white">Address</th>
-            <th color="white">Site Role</th>
+            <th style="color:white">User</th>
+            <th style="color:white">ID</th>
+            <th style="color:white">Address</th>
+            <th style="color:white">Site Role</th>
         </tr>
         <xsl:for-each select="userlist/user">
             <tr>
-                <td color="white"><xsl:value-of select="username"/></td>
-                <td color="white"><xsl:value-of select="userId"/></td>
-                <td color="white"><xsl:value-of select="userAd"/></td>
-                <td color="white"><xsl:value-of select="userRole"/></td>
+                <td style="color:white"><xsl:value-of select="username"/></td>
+                <td style="color:white"><xsl:value-of select="userId"/></td>
+                <td style="color:white"><xsl:value-of select="userAd"/></td>
+                <td style="color:white"><xsl:value-of select="userRole"/></td>
             </tr>
         </xsl:for-each>
     </table>
