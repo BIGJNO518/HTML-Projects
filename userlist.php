@@ -5,10 +5,14 @@
 <BODY>
 <H1>User Info:</H1>
 <?php
-$selecteduser=$_POST["username"];
-$xml2 = simplexml_load_file('userlist.xml');
+//$selecteduser=$_POST["username"];
+echo 'Test';
+//$xml2 = simplexml_load_file('userlist.xml');
+/*foreach($xml2->user as $user) {
+    echo $user->username;
+}
 foreach($xml2->user as $user) { // for every user node
-    if($user->$username == $selecteduser) {
+    if($user->username == $selecteduser) {
         echo $user->username;
         echo $user->userId;
         echo $user->userAd;
@@ -19,8 +23,9 @@ foreach($xml2->user as $user) { // for every user node
 
     }
 }
-
+*/
 ?>
 
 
 </BODY>
+</HTML>
