@@ -1,17 +1,17 @@
-<HTML>
-<HEAD>
+<html>
+<head>
     <TITLE>User List</TITLE>
-</HEAD>
-<BODY>
+</head>
+<body>
 <H1>User Info:</H1>
 <?php
-//$selecteduser=$_POST["username"];
+$selecteduser=$_POST["username"];
 echo 'Test';
-//$xml2 = simplexml_load_file('userlist.xml');
-/*foreach($xml2->user as $user) {
+$xml2 = simplexml_load_file('userlist.xml');
+foreach($xml2->user as $user) {
     echo $user->username;
 }
-foreach($xml2->user as $user) { // for every user node
+foreach($xml2->user as $user) {
     if($user->username == $selecteduser) {
         echo $user->username;
         echo $user->userId;
@@ -23,9 +23,8 @@ foreach($xml2->user as $user) { // for every user node
 
     }
 }
-*/
-?>
 
+? >
 
-</BODY>
-</HTML>
+</body>
+</html>
